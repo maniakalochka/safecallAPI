@@ -18,5 +18,6 @@ class User(Base):
     is_admin = Column(Boolean, default=False)
     karma = Column(Integer, default=0)
 
+
 async def get_user_db(session: AsyncSession = Depends(get_db)):
     yield session
