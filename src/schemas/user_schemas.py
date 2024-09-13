@@ -8,7 +8,7 @@ class UserCreate(BaseModel):
 
 
 class SuperUserCreate(UserCreate):
-    is_admin: bool = Field(False, title="Is Admin")
+    is_admin: bool = Field(True, title="Is Admin")
 
 
 class UserRead(BaseModel):
