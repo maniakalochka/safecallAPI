@@ -21,6 +21,8 @@ class UserRead(BaseModel):
 
 
 class UserUpdate(BaseModel):
+    """/TODO реализовать позже"""
+
     username: str = Field(None, title="Username", max_length=255)
     hashed_password: str = Field(None, title="Password", max_length=255)
 
@@ -29,6 +31,7 @@ class UserUpdate(BaseModel):
 
 
 class KarmaUpdate(BaseModel):
+    """/TODO реализовать карму позже"""
     karma: int = Field(..., title="Karma", ge=0)
 
     class Config:

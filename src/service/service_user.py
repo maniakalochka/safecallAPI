@@ -24,7 +24,7 @@ async def create_superuser(db: AsyncSession, user: SuperUserCreate) -> User:
 
 
 
-async def get_user(db: AsyncSession,
+async def get_users(db: AsyncSession,
                    skip: int  = 0,
                    limit: int = 100) -> User:
     result = await db.execute(select(User).offset(skip).limit(limit))
