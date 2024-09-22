@@ -4,7 +4,9 @@ from pydantic import BaseModel, Field
 class UserCreate(BaseModel):
     username: str = Field(..., title="Username", max_length=255)
     hashed_password: str = Field(..., title="Password", max_length=255)
+    is_admin: bool = Field(False, title="Is Admin")
     karma: int = Field(0, title="Karma", ge=0)
+
 
 
 class SuperUserCreate(UserCreate):
